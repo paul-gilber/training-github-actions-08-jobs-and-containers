@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
+      # Use `vars` context to reference repository and organization environment variables
       # https://docs.github.com/en/actions/learn-github-actions/contexts#vars-context
       MONGODB_CLUSTER_ADDRESS: ${{ vars.MONGODB_CLUSTER_ADDRESS }}
       # https://docs.github.com/en/actions/learn-github-actions/contexts#secrets-context
